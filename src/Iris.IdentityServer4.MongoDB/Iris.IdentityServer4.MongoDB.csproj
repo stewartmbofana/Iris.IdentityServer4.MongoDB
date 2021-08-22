@@ -1,24 +1,31 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackOnBuild>true</PackOnBuild>
     <Authors>Stewart Mbofana</Authors>
     <Copyright>All rights reserved</Copyright>
-    <PackageLicenseUrl>https://github.com/stewartm83/Iris.IdentityServer4.MongoDB/blob/main/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <Owners>Stewart Mbofana</Owners>
     <PackageProjectUrl>https://github.com/stewartm83/Iris.IdentityServer4.MongoDB</PackageProjectUrl>
     <Summary>A Mongo DB adapter for Identity Server </Summary>
     <Title>Iris IdentityServer4 MongoDB Adapter</Title>
     <Description>A Mongo DB adapter for Identity Server </Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/stewartm83/Iris.IdentityServer4.MongoDB</RepositoryUrl>
+    <PackageTags>IdentityServer4</PackageTags>
+    <PackageReleaseNotes>Version 1.0.1 Update setup options</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\build\bin\Debug</OutputPath>
+    <OutputPath>..\..\build\bin\Debug\netcoreapp3.1\netcoreapp3.1\netcoreapp3.1</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>..\..\build\bin\Release</OutputPath>
+    <OutputPath>..\..\build\bin\Release\netcoreapp3.1\netcoreapp3.1\netcoreapp3.1</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="IdentityServer4" Version="4.1.2" />
@@ -26,6 +33,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Services\" />
+    <None Include="..\..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
